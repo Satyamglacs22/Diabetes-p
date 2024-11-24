@@ -3,7 +3,8 @@ import numpy as np
 import pickle
 
 # Load the trained model
-model = pickle.load(open('diabetes_model.pkl', 'rb'))
+with open('diabetes_model.pkl', 'rb') as file:
+    model = pickle.load(file)
 
 #  app title
 st.title('Diabetes Prediction')
